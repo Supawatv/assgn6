@@ -7,6 +7,90 @@ body {
 	background-color: #F2F2F2;
 }
 
+/* Overlay */
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Modal */
+#modal {
+    position: absolute;
+    top: 40%; 
+    margin:  0px 15%;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+    box-shadow: 2.5px 2.5px 5px 5px rgba(0,0,0,.04);
+    height: 100%;
+    flex-grow: 1;
+}
+
+#modal article{
+		flex-flow: column;	
+}
+#product_image{
+	width: 100%;
+	height: 600px;
+	background-image: url(p_spice.png);
+	background-size: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding: 2.5% 0px;
+
+}
+
+#close{
+	text-align: right;
+	padding: 0 5%;
+}
+
+#product_info{
+	text-align: left;
+	margin:  0 10%;
+}
+
+
+#modal_LR{
+	display: flex;
+	flex-flow: row;
+	background-color: white;
+}
+
+
+#modal_L{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	padding-bottom: 2.5%;
+}
+
+#modal_R *{
+	text-align: left;
+	margin:  10% 10%;
+}
+
+#modal_R img{
+	width: 80%;
+	margin: -5% 10%;
+	margin-bottom:10%;
+}
+
+#modal_R h1, p{
+	font-size: 20px;
+	line-height: 140.62%;
+}
+
+
+
+
+
+
 /* Top bar */
 	nav {
 		display: flex;
@@ -294,7 +378,7 @@ body {
 
 /* Callout */
 	#call_out{
-		margin:  7.5% 0% 0% 10%;
+		margin:  5% 0% 0% 10%;
 		font-size: 28px;
 		line-height: 140.62%;
 	}
