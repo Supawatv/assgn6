@@ -52,23 +52,22 @@ function add_to_cart(quanitity, flavor, glaze) {
 }
 
 // Listening Event
-add_cart.addEventListener("click", function() {
-	user_select = drop.options[drop.selectedIndex].text;
-	add_to_cart(user_select, "cow", "cow");
-	View_update_num_cart()
-})
+if (add_cart != null) {
+	add_cart.addEventListener("click", function() {
+		user_select = drop.options[drop.selectedIndex].text;
+		add_to_cart(user_select, "cow", "cow");
+		View_update_num_cart()
+	})
+}
 
 
 
 // -----------------------------------
 // Just for points
 // When GF IS tap
-GF.addEventListener("click", function() {
-	console.log("FUCK!");
-
-
-	product_image.style.backgroundImage =
-		"url(https://www.gannett-cdn.com/media/2019/04/18/USATODAY/usatsports/imageforentry22-rjz.jpg?quality=10)";
-
-
-})
+if (GF != null) {
+	GF.addEventListener("click", function() {
+		product_image.style.backgroundImage =
+			"url(https://www.gannett-cdn.com/media/2019/04/18/USATODAY/usatsports/imageforentry22-rjz.jpg?quality=10)";
+	})
+}

@@ -1,0 +1,58 @@
+body{
+	background-color: lightgray;
+}
+
+
+.REMOVER{
+	background-color: red;
+}
+
+
+.cart{
+	margin:  5% 10%;
+	display: flex;
+	flex-direction: row;
+}
+
+#left{
+	flex: 2 0 0;
+	margin-right: 2.5%;
+	padding: 0% 2.5%;
+
+}
+
+#right{
+	background-color: white;
+	flex:  1 0 0;
+	margin-left: 2.5%;
+	padding: 2.5% 2.5%;
+	max-height: 675px;
+}
+
+
+
+.cart_card{
+	background-color: white;
+	padding: 2.5% 2.5%;
+	display: flex;
+	flex-direction: row;
+	border-radius: 3px;
+	margin-bottom: 5%;
+	
+}
+/* 
+.cart_card > *{
+	border-style: solid;
+	border-width: 5px;
+} */
+
+
+#details_cart{ /* Container */
+		display: flex;
+		align-items: center;
+	}
+
+#checkout{
+	width: 100%;
+}
+
