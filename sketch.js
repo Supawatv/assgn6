@@ -134,8 +134,6 @@ function create_card(bun) {
 	glaze = bun.glaze;
 	id = bun.id;
 
-
-
 	// Replace Text
 	output = output.replace("bun_name", flavor);
 	output = output.replace("glaze_type", glaze);
@@ -214,7 +212,5 @@ function local_del(id) {
 			localStorage.setItem("user_cart", JSON.stringify(cart))
 		}
 	}
-
-
 
 }
