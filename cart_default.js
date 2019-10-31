@@ -22,4 +22,16 @@ function display_default() {
 // Runs on load
 function onLoadCart() {
 	display_default();
+	update_price();
+}
+
+function update_price() {
+	cart = JSON.parse(localStorage.getItem("user_cart"))
+	price = (5.99 * (cart.length));
+	price = price.toFixed(2);
+	price = "$" + price;
+	$(document).ready(function() {
+		$("#total_price").text(price);
+	});
+
 }

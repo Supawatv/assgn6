@@ -81,7 +81,7 @@ if (button_add_cart2 != null) {
 	button_add_cart2.addEventListener("click", function() {
 		user_select = drop2.options[drop2.selectedIndex].text;
 		add_to_cart(user_select, "Bun 2", "Glaze B");
-		View_update_num_cart()
+		View_update_num_cart();
 	})
 }
 
@@ -194,7 +194,7 @@ function create_remover(id) {
 
 			$("#" + id).slideFadeToggle(250).delay(250)
 			View_update_num_cart();
-
+			onLoadCart();
 		});
 	});
 }
