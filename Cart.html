@@ -8,7 +8,7 @@
 	</head>
 </head>
 
-<body onload="onLoad()" >
+<body onload="onLoad(), onLoadCart()">
 	
 	<!-- Top Bar -->
 	<nav>
@@ -33,6 +33,11 @@
 			
 			<h1>My Cart</h1>
 			
+			<div id="empty_def">
+			<h2>So your cart is empty...</h2>
+			<a class="button1" href="Shop.html">Shop for Buns Buns!</a>
+			</div>
+			
 
 		</div>
 			
@@ -41,8 +46,6 @@
 				<h5>Subtotal</h5>
 				<h3>$35.64</h3>
 				<img id="checkout" src="resources/Checkout Button.png">
-				<h3>Your Delivery Box:</h3>
-				<img src="resources/Grid.png">
 			</div>
 			
 		</section>
@@ -67,5 +70,7 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>		
 	<script src="main.js" type="text/javascript"></script>
+	<script src="product.js" type="text/javascript"></script>
+	<script src="cart_default.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -9,6 +9,8 @@ body {
 
 /* Overlay */
 .overlay {
+    margin:  0 0;
+    padding:  0 0;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -18,26 +20,27 @@ body {
 
 /* Modal */
 #modal {
+    width: 60%;
     position: absolute;
-    top: 20%; 
-    margin:  0px 15%;
+    top: 10%;
+    right: 20%;
     background-color: white;
     border-radius: 5px;
     text-align: center;
     z-index: 11; /* 1px higher than the overlay layer */
     box-shadow: 2.5px 2.5px 5px 5px rgba(0,0,0,.04);
-    
-    flex-grow: 1;
 }
 
 #modal article{
-		flex-flow: column;	
+	flex-flow: column;
+
 }
+
 #product_image{
 	width: 100%;
 	height: 600px;
 	background-image: url(p_spice.png);
-	background-size: 100%;
+	background-size: cover;
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
@@ -56,36 +59,10 @@ body {
 }
 
 
-#modal_LR{
-	display: flex;
-	flex-flow: row;
-	background-color: white;
+
+#modal_L p{
+	flex-grow: 1;
 }
-
-
-#modal_L{
-	display: flex;
-	flex-flow: column;
-	justify-content: space-evenly;
-	padding-bottom: 2.5%;
-}
-
-#modal_R *{
-	text-align: left;
-	margin:  10% 10%;
-}
-
-#modal_R img{
-	width: 80%;
-	margin: -5% 10%;
-	margin-bottom:10%;
-}
-
-#modal_R h1, p{
-	font-size: 20px;
-	line-height: 140.62%;
-}
-
 
 
 
@@ -232,37 +209,33 @@ body {
 
 	/* Flavor Selector */
 	#flavors{
-		float: left;
+		
 		display: flex;
-		flex-wrap: nowrap;
-		overflow-x: auto;
 		width: 100%;
-		align-items: center;
+		justify-content: center;
 	}
 
-	#flavors a{
-		margin-left: 5%;
-		margin-right: 5%;
-	}
 
 	/* For Selecting Coarting */
 	#selection{ /* Container */
-		float: left;
+		width: 80%;
 		display: flex;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		overflow-x: auto;
-		width: 100%;
+		justify-content: center;
 	}
 
 
-	#selection > *  { /* Content */
+
+
+
+	#selection button  { /* Content */
 		flex: 0 0 auto;
-		display: inline-block;
 		overflow: auto;
 		border: none;
 		color: white;
 		padding: 15px 32px;
-		margin: 0 12px;
+		margin: 12px 12px;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
@@ -270,9 +243,12 @@ body {
 		background: #F2F2F2;
 		border-radius: 5px;
 		color: #000000;
+
+
+
 	}
 
-	#None{
+	#selection > #none{
 		background: #EB5757;
 		color: #FFFFFF;
 	}
@@ -292,7 +268,7 @@ body {
 		font-size: 16px;
 		display: flex;
 		color: rgba(0, 0, 0, 0.6);
-		margin-right: 2.5px;
+		margin-right: 0;
 		width: 200px;
 		
 	}
@@ -306,22 +282,10 @@ body {
 
 		color: #000000;
 		margin-right: 2.5%
-		
+	
 	}
 
-	#details a{
-		/* Add to Cart */
-		font-size: 16px;
-		line-height: 19px;
-		text-decoration: none;
-		color: #000000;
-		width: 100%;
-		text-align: right;
-	}
 
-	#details a:hover{
-		font-weight: bold;
-	}
 
 
 
@@ -455,11 +419,17 @@ body {
 }
 
 #right{
+	margin-top: 10%;
 	background-color: white;
 	flex:  1 0 0;
 	margin-left: 2.5%;
 	padding: 2.5% 2.5%;
 	max-height: 675px;
+	border-radius: 3px;
+	box-shadow: 2.5px 2.5px 5px 5px rgba(0,0,0,.04);
+	height: 400px
+
+
 }
 
 
@@ -471,13 +441,31 @@ body {
 	flex-direction: row;
 	border-radius: 3px;
 	margin-bottom: 5%;
-	
+	align-items: center;
+	border-radius: 3px;
+	box-shadow: 2.5px 2.5px 5px 5px rgba(0,0,0,.04);
+	height: 200px;
 }
-/* 
-.cart_card > *{
+
+.cartCardImage{
+	height: auto;
+	width: 200px;
+}
+
+
+/* Debug */
+/* .cart_card > *{
 	border-style: solid;
-	border-width: 5px;
-} */
+	border-width: 1px;
+}
+ */
+
+.cartCardTitle{
+	margin-left: 10px;
+	margin-right: 20px;
+	width: 130px
+}
+
 
 
 #details_cart{ /* Container */
@@ -488,8 +476,6 @@ body {
 #checkout{
 	width: 100%;
 }
-
-
 
 
 
@@ -528,3 +514,101 @@ body {
 		background-color: black;
 		margin: 5% 0;
 	}
+
+
+.button1{
+		flex: 0 0 auto;
+		overflow: auto;
+		border: none;
+		color: white;
+		padding: 15px 15px;
+		margin: 12px 12px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		border-radius: 5px;
+		background: #EB5757;
+		color: #FFFFFF;
+}
+
+
+
+
+/* Similar Item */
+#LEFT, #RIGHT{
+	margin: 50px;	
+	/* background: black; */
+	width: 18%;
+	height:  18%;
+}
+
+
+	#sim_box{
+		float: left;
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
+
+	.similar_items{ 
+		float: left;
+		display: flex;
+		overflow-x: auto;
+		flex-wrap: nowrap;
+		justify-content: left;
+		margin-bottom: 30px;
+	}
+
+	.similar_items > *{ 
+		border-style: solid;
+  		border-width: 1px;
+  		border-radius: 3px;
+  		border-color: lightgrey;
+  		margin: 10px;
+	}
+
+
+/* Similar Page */
+
+	#sim_header{
+		display: flex;
+		margin-left: 10%;
+		margin-right: 10%;
+		justify-content: left;
+	}
+
+
+	#empty_def{
+		text-align: center;
+		height: 100%
+	}
+
+
+	#empty_def > h2{
+		padding-top: 25%;		
+	}
+
+
+/* Cart 2 */
+.remover{
+		flex: 0 0 auto;
+		overflow: auto;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		margin: 12px 12px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		border-radius: 5px;
+		background: #F2F2F2;
+		color: #000000;
+}
+
+.remover:hover{
+	background: #EB5757;
+		color: #FFFFFF;
+
+}
